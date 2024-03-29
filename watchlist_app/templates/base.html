@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+</head>
+<body ng-controller="MovieController">
+    <h1>Liste du contenu disponible<h1>
+    <ul>
+        <h1>{{ movies }}</h1>
+            <li ng-repeat="movie in movies">
+                <span ng-bind="movie.title"></span>
+                <span ng-bind="movie.storyline"></span>
+            </li>
+    </ul>
+</body>
+</html>
+
+
